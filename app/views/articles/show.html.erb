@@ -6,7 +6,7 @@
         <!-- Blog Post -->
 
         <!-- Title -->
-        <h1 style="font-size: 62.5px;">  
+        <h1 style="font-size: 62.5px;">
          <%= @article.title %>
         </h1>
 
@@ -18,26 +18,26 @@
         <hr>
 
         <!-- Date/Time -->
-        <p><span class="glyphicon glyphicon-time"></span> Was Posted: 
-     
+        <p><span class="glyphicon glyphicon-time"></span> Was posted about <%= time_ago_in_words(@article.created_at) %> ago </p>
+
 
         <hr>
 
         <!-- Preview Image -->
-        
+
 
         <!-- Post Content -->
           <%= @article.body %>
-       
+
         <hr>
 
         <!-- Blog Comments -->
 <%= render @article.comments %>
         <!-- Comments Form -->
-       
-        <%= render 'comments/form' %>  
+
+        <%= render 'comments/form' %>
         <div class="well">
-          
+
 
 <h4></h4>
 
@@ -58,15 +58,15 @@
     <div class="col-md-4">
 
         <!-- Blog Search Well -->
-        
+
 
         <!-- Blog Categories Well -->
-        
+
 
         <!-- Side Widget Well -->
         <div class="well">
           <h4></h4>
-  
+
         </div>
 
     </div>
