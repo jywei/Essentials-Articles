@@ -19,9 +19,6 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 
 
-
-
-
 group :development, :test do
     gem 'byebug'
 end
@@ -30,6 +27,7 @@ group :development do
     gem 'web-console', '~> 2.0'
     gem 'spring'
     gem 'sqlite3'
+    gem 'figaro', '~> 1.1', '>= 1.1.1'
 end
 
 group :production do
