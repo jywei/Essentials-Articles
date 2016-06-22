@@ -14,7 +14,7 @@
         <p class="lead">
           <%= @article.user.username %>
         </p>
-
+        <%= image_tag @article.user.image.url(:thumb), class: "img-circle" %>
         <hr>
 
         <!-- Date/Time -->
@@ -32,7 +32,7 @@
         <hr>
 
         <!-- Blog Comments -->
-<%= render @article.comments %>
+        <%= render @article.comments %>
         <!-- Comments Form -->
 
         <%= render 'comments/form' %>
