@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
       redirect_to article_path(@article), notice: "Your comment has been saved."
     else
       redirect_to @article
-      flash[:warning] = "There was a problem saving your comment, Minimum length is 5 characters and the Max is 500"
+      flash[:warning] = "There was a problem saving your comment, minimum length is 5 characters and the maximum is 500"
     end
 end
 
