@@ -4488,3 +4488,219 @@ ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halfli
   Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-06-25 16:37:05 +0800
+Processing by RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (95.6ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+  Rendered layouts/_foot.html.erb (0.9ms)
+Completed 200 OK in 184ms (Views: 180.6ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/users" for ::1 at 2016-06-25 16:37:30 +0800
+Processing by RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u3zQGmTRxDinUAchsOGPRIm6ncD2FokY75icq8SiKfjVkiEIBPUKyyOHpCEEakVdsYRu4TMoYCakBWJdiRtShQ==", "user"=>{"username"=>"steve", "email"=>"captainusa@shields.gov", "firstname"=>"Steve", "lastname"=>"Rogers", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ffd77458d60 @tempfile=#<Tempfile:/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/RackMultipart20160625-19069-1eafqxx.jpg>, @original_filename="6-go-to-biker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"6-go-to-biker.jpg\"\r\nContent-Type: image/jpeg\r\n">, "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Command :: file -b --mime '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-1cwya7n.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-10q4pjw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-10q4pjw.jpg[0]'
+Command :: convert '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-10q4pjw.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/094183922c27a1ce274658273bd10edf20160625-19069-1sbfcda'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-10q4pjw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-10q4pjw.jpg[0]'
+Command :: convert '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-10q4pjw.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/094183922c27a1ce274658273bd10edf20160625-19069-13q4ps9'
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'steve' AND "users"."id" != 1) LIMIT 1
+Command :: file -b --mime '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/2014b0208c782278681fd8799e6d885820160625-19069-1yy1qsb.jpg'
+  Rendered devise/registrations/edit.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+  Rendered layouts/_foot.html.erb (0.3ms)
+Completed 200 OK in 490ms (Views: 99.5ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/users" for ::1 at 2016-06-25 16:37:48 +0800
+Processing by RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eqpLaAMfnWM9Bc9ppgEtOgbIxq5DzTJAquTFYCHF2EcURLp6YztTkLnSbGkSiucjPvY1j4bz237heTuWbHyjOg==", "user"=>{"username"=>"steve", "email"=>"captainusa@shields.gov", "firstname"=>"Steve", "lastname"=>"Rogers", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ffd7986b720 @tempfile=#<Tempfile:/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/RackMultipart20160625-19069-jkmkdz.jpg>, @original_filename="6-go-to-grey-navy.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"6-go-to-grey-navy.jpg\"\r\nContent-Type: image/jpeg\r\n">, "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-1ohhxtc.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-119qzri.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-119qzri.jpg[0]'
+Command :: convert '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-119qzri.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/be4b67a35295114b5f6905762713afee20160625-19069-blf4z3'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-119qzri.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-119qzri.jpg[0]'
+Command :: convert '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-119qzri.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/be4b67a35295114b5f6905762713afee20160625-19069-1ojp7np'
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'steve' AND "users"."id" != 1) LIMIT 1
+Command :: file -b --mime '/var/folders/tp/rsfbg5n17014t9mm56fy7cxw0000gn/T/7adf58b854c73b9cb99b70cbe848fd6a20160625-19069-s50djh.jpg'
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "6-go-to-grey-navy.jpg"], ["image_file_size", 31463], ["image_updated_at", "2016-06-25 08:37:48.318661"], ["updated_at", "2016-06-25 08:37:48.497638"], ["id", 1]]
+[paperclip] deleting /Users/JYWei/Documents/RailsProjects/Essentials-Articles/public/system/users/images/000/000/001/original/6-go-to-biker.jpg
+[paperclip] deleting /Users/JYWei/Documents/RailsProjects/Essentials-Articles/public/system/users/images/000/000/001/medium/6-go-to-biker.jpg
+[paperclip] deleting /Users/JYWei/Documents/RailsProjects/Essentials-Articles/public/system/users/images/000/000/001/thumb/6-go-to-biker.jpg
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3002/
+Completed 302 Found in 308ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-25 16:37:48 +0800
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3002/articles
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2016-06-25 16:37:48 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+  Rendered layouts/_foot.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2016-06-25 16:37:49 +0800
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.5ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.9ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.5ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2016-06-25 16:37:49 +0800
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.7ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.4ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2016-06-25 16:37:49 +0800
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JYWei/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.1ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JYWei/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.7ms)
