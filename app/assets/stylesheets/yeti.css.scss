@@ -3026,6 +3026,7 @@ select[multiple].input-lg {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-decoration: none;
 }
 .btn:focus,
 .btn:active:focus,
@@ -3181,6 +3182,7 @@ fieldset[disabled] .btn-primary.focus {
   color: #ffffff;
   background-color: #43ac6a;
   border-color: #3c9a5f;
+  text-decoration: none;
 }
 .btn-success:focus,
 .btn-success.focus {
@@ -3352,6 +3354,7 @@ fieldset[disabled] .btn-warning.focus {
   color: #ffffff;
   background-color: #f04124;
   border-color: #ea2f10;
+  text-decoration: none;
 }
 .btn-danger:focus,
 .btn-danger.focus {
