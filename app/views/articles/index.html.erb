@@ -1,32 +1,33 @@
 <div class="row">
     <!-- Blog article Content Column -->
     <div class="col-lg-8">
-<% @articles.each do |article| %>
-        <!-- Blog article -->
 
-        <!-- Title -->
-        <h4 style="font-size: 25.5px;"><%= link_to article.title, article %></h4>
-                        <!-- Date/Time -->
-        <p><span class="glyphicon glyphicon-time"></span>
-          <%= time_ago_in_words(article.created_at) %>
-        </p>
+      <%= link_to "New article", new_article_path, class: "btn btn-default btn-xs" %>
+
+      <% @articles.each do |article| %>
+              <!-- Blog article -->
+
+              <!-- Title -->
+              <h4 style="font-size: 25.5px;"><%= link_to article.title, article %></h4>
+                              <!-- Date/Time -->
+              <p><span class="glyphicon glyphicon-time"></span>
+                <%= time_ago_in_words(article.created_at) %>
+              </p>
 
 
-        <!-- Author -->
-        <p>
-             Article By:<strong>  <%=  article.user.username %></strong>
-             <%= image_tag article.user.image.url(:thumb), class: "img-circle" %>
-        </p>
+              <!-- Author -->
+              <p>
+                   Article By:<strong>  <%= article.user.username %></strong>
+                   <%= image_tag article.user.image.url(:thumb), size: "100x100", class: "img-circle" %>
+              </p>
 
-        <hr>
+              <hr>
 
-        <!-- articleed Comments -->
+              <!-- articleed Comments -->
 
-        <!-- Comment -->
+              <!-- Comment -->
 
-<% end %>
-
-<%= link_to "New article", new_article_path, class: "btn btn-default btn-xs" %>
+      <% end %>
 
     </div>
 

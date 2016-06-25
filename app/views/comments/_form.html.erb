@@ -1,6 +1,4 @@
 <%= simple_form_for ([@article, @article.comments.build]) do |f| %>
-
-<%= f.input :body, label: false, placeholder: "Enter a comment" %>
-<%= f.submit "Post your comment", class: "btn btn-primary" %>
-
+  <%= f.input :body, label: false, placeholder: "Enter a comment" %>
+  <%= f.submit "Post your comment", class: "btn btn-primary" %>
 <% end %>

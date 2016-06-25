@@ -6,7 +6,7 @@
         <!-- Blog Post -->
 
         <!-- Title -->
-        <h1 style="font-size: 62.5px;">
+        <h1 style="font-size: 50px;">
          <%= @article.title %>
         </h1>
 
@@ -14,7 +14,9 @@
         <p class="lead">
           Article by: <%= @article.user.username %>
         </p>
-        <%= image_tag @article.user.image.url(:thumb), class: "img-circle" %>
+
+        <%= image_tag @article.user.image.url(:thumb), size: "100x100", class: "img-circle" %>
+
         <hr>
 
         <!-- Date/Time -->
@@ -75,11 +77,15 @@
 
 </div>
 
-<%= link_to 'Back', articles_path, class: "btn btn-success round" %> |
+<%= link_to 'Back', articles_path, class: "btn btn-success round" %>
 
-<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-info round" %> |
+<% if can? :update, @article %>
+    | <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-info round" %> |
+<% end %>
 
-<%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are really sure you want to do this?' }, class: "btn btn-danger round" %>
+<% if can? :destroy, @article %>
+    <%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are really sure you want to do this?' }, class: "btn btn-danger round" %>
+<% end %>
 
 <br>
 <br>
