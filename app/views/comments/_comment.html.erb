@@ -1,40 +1,30 @@
 <div class="color round2">
-    <div class="comment-body">
-        <div class="media">
-            <div class="pull-left">
-
-                <strong>Comment by: <%= comment.user.username %></strong> <br />
-                <br>
-                <%= image_tag comment.user.image.url(:thumb), size: "100x100", class: "img-circle" %>
-
-            </div>
-
-            <br>
-
-            <div class="media-body">
-                <p class="media-heading pull-right">
-                  <%= time_ago_in_words(comment.created_at) %>
-                </p><br />
-                <%= comment.body %>
-                <br />
-
-            </div>
-
-            <br />
-        </div>
-
+  <div class="comment-body">
+    <div class="media">
+      <div class="pull-left">
+        <strong>Comment by: <%= comment.user.username %></strong> <br />
+        <br>
+        <%= image_tag comment.user.image.url(:thumb), size: "100x100", class: "img-circle" %>
+      </div>
+      <br>
+      <div class="media-body">
+        <p class="media-heading pull-right">
+          <%= time_ago_in_words(comment.created_at) %>
+        </p><br />
+        <%= comment.body %>
         <br />
-
-        <% if can? :update, comment %>
-            <%= link_to "Edit Comment", edit_article_comment_path(comment.article, comment), class: "btn btn-info btn-xs round" %>
-        <% end %>
-
-        <% if can? :destroy, comment %>
-            <%= link_to "Delete Comment", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs round" %>
-        <% end %>
-
-        <br />
+      </div>
+      <br />
     </div>
-</div>
+    <br />
+    <% if can? :update, comment %>
+      <%= link_to "Edit Comment", edit_article_comment_path(comment.article, comment), class: "btn btn-info btn-xs round" %>
+    <% end %>
 
+    <% if can? :destroy, comment %>
+      <%= link_to "Delete Comment", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs round" %>
+    <% end %>
+    <br />
+  </div>
+</div>
 <br />

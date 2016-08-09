@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource param_method: :my_sanitizer
-  load_and_authorize_resource :through => :current_user
+  load_and_authorize_resource through: :current_user
 
   def create
     @article = Article.find(params[:article_id])
@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
       redirect_to @article
       flash[:warning] = "There was a problem saving your comment, minimum length is 5 characters and the maximum is 500"
     end
-end
+  end
 
   def update
     @article = Article.find(params[:article_id])
@@ -42,9 +42,7 @@ end
 
   private
 
-    def my_sanitizer
-      params.require(:comment).permit(:body)
-    end
-
-
+  def my_sanitizer
+    params.require(:comment).permit(:body)
+  end
 end

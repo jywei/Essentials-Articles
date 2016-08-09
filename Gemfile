@@ -19,22 +19,27 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'aws-sdk', '< 2.0'
 gem 'cancancan', '~> 1.14'
+gem "awesome_print", require:"ap"
+gem "binding_of_caller"
+gem 'rolify'
 
 
 
 group :development, :test do
-    gem 'byebug'
+  gem 'pry-byebug'
 end
 
 group :development do
-    gem 'web-console', '~> 2.0'
-    gem 'spring'
-    gem 'sqlite3'
-    gem 'figaro', '~> 1.1', '>= 1.1.1'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'sqlite3'
+  gem 'figaro', '~> 1.1', '>= 1.1.1'
+  gem 'quiet_assets'
+  gem 'better_errors'
 end
 
 group :production do
-    gem 'rails_12factor', '~> 0.0.3'
-    gem 'pg', '~> 0.18.4'
+  gem 'rails_12factor', '~> 0.0.3'
+  gem 'pg', '~> 0.18.4'
 end
 
