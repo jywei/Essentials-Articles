@@ -19,10 +19,11 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'aws-sdk', '< 2.0'
 gem 'cancancan', '~> 1.14'
-gem "awesome_print", require:"ap"
+gem "awesome_print", require: "ap"
 gem "binding_of_caller"
 gem 'rolify'
-
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
 
 
 group :development, :test do

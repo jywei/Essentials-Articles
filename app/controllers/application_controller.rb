@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     flash[:danger] = "Sorry, you are not authorized to access this area!"
   end
 
+  def new_session_path(scope)
+    new_user_session_path
+  end
+
 end
 
 
