@@ -12,6 +12,40 @@ class ApplicationController < ActionController::Base
     new_user_session_path
   end
 
+  private
+
+  def sign_up_params
+    params.require(:user).permit(
+      :email,
+      :password,
+      :password_confirmation,
+      :username,
+      :firstname,
+      :lastname,
+      :image,
+      :url,
+      :provider,
+      :uid,
+      :name,
+      :oauth_token,
+      :oauth_expires_at
+      )
+  end
+
+  def account_update_params
+    params.require(:user).permit(
+      :email,
+      :password,
+      :password_confirmation,
+      :current_password,
+      :username,
+      :firstname,
+      :lastname,
+      :image,
+      :url
+      )
+  end
+
 end
 
 

@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Awesome Articles</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render 'layouts/nav' %>
- <%= bootstrap_flash %>
-<div class='container'>
-  <%= yield %>
-</div>
+  <head>
+    <title>Awesome Articles</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'layouts/nav' %>
+   <%= bootstrap_flash %>
+  <div class='container'>
+    <%= yield %>
+  </div>
 
-<%= render 'layouts/foot' %>
+  <%= render 'layouts/foot' %>
 
-</body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '551716458351858',
+        xfbml      : true,
+        version    : 'v2.7'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  </body>
 </html>
